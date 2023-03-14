@@ -12,6 +12,8 @@ import {
   StackDivider,
 } from "@chakra-ui/react";
 import SideNav from "./SideNav";
+import { Link } from "./../Link";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Menu = () => {
   return (
@@ -57,14 +59,35 @@ const Menu = () => {
                   <Heading size="xs" textTransform="uppercase">
                     sns
                   </Heading>
-                  <Text pt="2" size="sm">
-                    Twitter
+                  <Text pt="2">
+                    <Link
+                      mx="2"
+                      size="sm"
+                      to={import.meta.env.VITE_TWITTER_END_URL}
+                      isExternal
+                    >
+                      Twitter <ExternalLinkIcon mx="2px" />
+                    </Link>
                   </Text>
-                  <Text pt="2" size="sm">
-                    Instagram
+                  <Text pt="2">
+                    <Link
+                      mx="2"
+                      size="sm"
+                      to={import.meta.env.VITE_INSTAGRAM_END_URL}
+                      isExternal
+                    >
+                      Instagram <ExternalLinkIcon mx="2px" />
+                    </Link>
                   </Text>
-                  <Text pt="2" size="sm">
-                    GitHub
+                  <Text pt="2">
+                    <Link
+                      mx="2"
+                      size="sm"
+                      to={import.meta.env.VITE_GITHUB_END_URL}
+                      isExternal
+                    >
+                      GitHub <ExternalLinkIcon mx="2px" />
+                    </Link>
                   </Text>
                 </Box>
               </Stack>
